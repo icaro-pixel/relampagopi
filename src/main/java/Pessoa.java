@@ -8,27 +8,35 @@ public class Pessoa {
         this.escolaridade = escolaridade;
     }
 
-    public String getEscolaridadeNome(){
+    public String getEscolaridadeDescricao(){
+
+        if (this.escolaridade == null){
+            throw new NullPointerException("Sem escolaridade");
+        }
 
         return this.escolaridade.getEscolaridadeInfo();
 
 
     }
 
+    public Escolaridade getEscolaridade() {
+        return this.escolaridade;
+    }
+
     public void setNaturalidade(Cidade naturalidade) {
         this.naturalidade = naturalidade;
     }
 
-    public String getEstadoNaturalidadeNome(){
+    public Estado getEstadoNaturalidade(){
 
-        return this.naturalidade.getNomeEstado();
+        return this.naturalidade.getEstado();
 
 
     }
 
-    public String getCidadeNaturalidadeNome(){
+    public Cidade getCidadeNaturalidade(){
 
-        return this.naturalidade.getNome();
+        return this.naturalidade;
     }
 
     public void setNome(String nome) {

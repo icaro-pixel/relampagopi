@@ -6,22 +6,22 @@ public class Professor extends Pessoa {
         this.curso = curso;
     }
 
-    public String getTipoEnsinoContratadoNome(){
+    public TipoEnsino getTipoEnsinoContratado(){
 
 
-        return this.curso.getTipoEnsino().getNomeTipo();
-
-    }
-
-    public String getNomeDiretor(){
-
-        return this.curso.getEscola().getDirecao().getNome();
+        return this.curso.getTipoEnsino();
 
     }
 
-    public String getNomeCoordenador(){
+    public Professor getDiretor(){
 
-        return this.curso.getCoordenacao().getNome();
+        return this.curso.getEscola().getDirecao();
+
+    }
+
+    public Professor getCoordenador(){
+
+        return this.curso.getCoordenacao();
 
     }
 

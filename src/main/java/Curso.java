@@ -13,9 +13,9 @@ public class Curso {
         this.coordenacao = coordenacao;
     }
 
-    public String getEscolaridadeNomeCoordenador(){
+    public Escolaridade getEscolaridadeCoordenador(){
 
-        return this.coordenacao.getEscolaridadeNome();
+        return this.coordenacao.getEscolaridade();
 
 
     }
@@ -46,5 +46,9 @@ public class Curso {
 
     public Escola getEscola() {
         return escola;
+    }
+
+    public String getNome() {
+        return this.nome;
     }
 }

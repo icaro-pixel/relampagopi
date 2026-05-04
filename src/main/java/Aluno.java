@@ -2,10 +2,9 @@ public class Aluno extends Pessoa {
 
     private Curso curso;
 
-    public String getCursoCidadeNome(){
+    public Cidade getCursoCidade(){
 
-        return this.curso.getCidade().getNome();
-
+        return this.curso.getCidade();
 
     }
 
@@ -13,9 +12,16 @@ public class Aluno extends Pessoa {
         this.curso = curso;
     }
 
-    public String getCoordNome(){
-
-        return this.curso.getCoordenacao().getNome();
+    public Professor getCoord(){
+        return this.curso.getCoordenacao();
     }
+
+    public Curso getCurso() {
+        return this.curso;
+    }
+
+
+
+
 
 }
